@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --main-color: #1967d2;
+  --paragraph-size: 16px;
+  --heading-one-size: 32px;
+  --heading-main-size: 60px;
+  --link-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  padding: 10px 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+header .logo h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+header .logo h2 span {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+header nav {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav #navbar {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--link-size);
+  position: relative;
+}
+header nav #navbar li a {
+  color: #000;
+  font-weight: 300;
+}
+header nav #navbar::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #e2e2e2;
+  right: -1.5rem;
+  bottom: 0;
+}
+header nav #user_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header nav #user_area button {
+  padding: 3px 20px;
+  font-size: var(--link-size);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+main .header-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 60px 5%;
+  gap: 2rem;
+  background: linear-gradient(to right bottom, rgba(15, 137, 218, 0.8), rgba(9, 118, 190, 0.8)), url(../../src/img/1634129604195.avif) center/cover no-repeat;
+}
+main .header-bottom .header-bottom-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .header-bottom .header-bottom-presentation .presentation-text h2 {
+  font-size: var(--heading-main-size);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+main .header-bottom .header-bottom-presentation .presentation-text p {
+  font-size: var(--paragraph-size);
+  color: rgba(255, 255, 255, 0.7176470588);
+  line-height: 24px;
+  margin-bottom: 4rem;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label {
+  width: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 70%;
+  padding: 1px;
+  transition: all 0.2s;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label input {
+  width: 81%;
+  height: 30px;
+  padding: 3px 7px;
+  font-size: var(--paragraph-size);
+  color: #9c9c9c;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label button {
+  font-size: var(--paragraph-size);
+  height: 30px;
+  cursor: pointer;
+  padding-inline: 20px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  width: 19%;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--link-size);
+  margin-top: 1rem;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul li a {
+  color: rgba(255, 255, 255, 0.6784313725);
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul li a:hover {
+  color: #fff;
+}
+
+@media (min-width: 1401px) {
+  main .header-bottom {
+    padding: 60px 15%;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text h2 {
+    font-size: 76px;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text .search-container label input {
+    height: 40px;
+    font-size: 24px;
+    width: 78%;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text .search-container label button {
+    height: 40px;
+    width: 22%;
+    font-size: 24px;
+  }
+}
