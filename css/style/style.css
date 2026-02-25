@@ -148,6 +148,186 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
 main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul li a:hover {
   color: #fff;
 }
+main .showing-jobs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 60px 5%;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+main .showing-jobs .showing-jobs-card {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #353535;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+main .showing-jobs .showing-jobs-card i {
+  font-size: var(--heading-one-size);
+  margin-bottom: 10px;
+}
+main .showing-jobs .showing-jobs-card h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main .showing-jobs .showing-jobs-card p {
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #777777;
+  margin-bottom: 10px;
+  transition: all 0.8s;
+}
+main .showing-jobs .showing-jobs-card button {
+  padding: 4px 17px;
+  font-size: var(--link-size);
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+main .showing-jobs .showing-jobs-card::before {
+  content: "";
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -2;
+}
+main .showing-jobs .showing-jobs-card::after {
+  content: "";
+  position: absolute;
+  height: 500px;
+  width: 300px;
+  left: 100%;
+  top: 100%;
+  background: linear-gradient(to right bottom, #0976be, #49acee, #07609c);
+  transition: all 0.8s;
+  z-index: -1;
+  border-radius: 100px;
+}
+main .showing-jobs .showing-jobs-card:hover::after {
+  top: -100px;
+  left: -100px;
+}
+main .showing-jobs .showing-jobs-card:hover {
+  box-shadow: rgba(149, 157, 165, 0.459) 0px 8px 24px;
+  scale: 1.1;
+}
+main .showing-jobs .showing-jobs-card:hover button {
+  background-color: #fff;
+  color: var(--main-color);
+  scale: 1.1;
+}
+main .showing-jobs .showing-jobs-card:hover p {
+  color: #2c2c2c;
+}
+main .showing-jobs::after {
+  content: "";
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  background-color: #f7caca;
+  border-radius: 100%;
+  z-index: -3;
+  top: 50%;
+  left: 60%;
+}
+main .showing-jobs::before {
+  content: "";
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background-color: #f7caca;
+  border-radius: 100%;
+  z-index: -3;
+  top: 80%;
+  left: 50%;
+}
+main .about-us-sec {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 60px 5%;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+  z-index: 0;
+  background-color: rgb(247, 202, 202);
+  overflow: hidden;
+}
+main .about-us-sec .about-us-sec-texts {
+  color: #ffffff;
+  position: relative;
+}
+main .about-us-sec .about-us-sec-texts h2 {
+  font-size: var(--heading-main-size);
+}
+main .about-us-sec .about-us-sec-texts p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+main .about-us-sec .about-us-sec-texts button {
+  padding: 4px 17px;
+  font-size: var(--paragraph-size);
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+main .about-us-sec .about-us-sec-texts::after {
+  content: "";
+  position: absolute;
+  width: 1800px;
+  height: 1000px;
+  left: -190%;
+  top: -320%;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 500px solid rgb(255, 180, 180);
+  z-index: -2;
+}
+main .about-us-sec::before {
+  content: "";
+  position: absolute;
+  bottom: 6%;
+  left: 4%;
+  width: 450px;
+  height: 450px;
+  background-color: transparent;
+  border: 10px dashed rgba(54, 160, 230, 0.4509803922);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate 120s linear infinite;
+}
+main .about-us-sec::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 140px;
+  height: 140px;
+  background-color: transparent;
+  border: 1px solid rgba(15, 137, 218, 0.4196078431);
+  z-index: -1;
+  animation: rotate 40s linear infinite reverse;
+}
 
 @media (min-width: 1401px) {
   main .header-bottom {
@@ -169,5 +349,10 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
     height: 40px;
     width: 22%;
     font-size: 24px;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
