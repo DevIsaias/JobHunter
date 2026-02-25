@@ -25,6 +25,24 @@ a {
   text-decoration: none;
 }
 
+.arrow-btn-icon {
+  display: none;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+button:hover {
+  background-color: #044875;
+}
+
+.arrow-btn-icon:hover {
+  display: block;
+  font-size: var(--paragraph-size);
+  margin-left: .5rem;
+  color: #fff;
+  opacity: 1;
+}
+
 header {
   display: flex;
   padding: 10px 40px;
