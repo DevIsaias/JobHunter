@@ -25,24 +25,6 @@ a {
   text-decoration: none;
 }
 
-.arrow-btn-icon {
-  display: none;
-  transition: all .3s ease-in;
-  opacity: 0;
-}
-
-button:hover {
-  background-color: #044875;
-}
-
-.arrow-btn-icon:hover {
-  display: block;
-  font-size: var(--paragraph-size);
-  margin-left: .5rem;
-  color: #fff;
-  opacity: 1;
-}
-
 header {
   display: flex;
   padding: 10px 40px;
@@ -98,6 +80,25 @@ header nav #user_area button {
   border-radius: 5px;
   background-color: var(--main-color);
   color: #fff;
+  position: relative;
+}
+
+header nav #user_area button .arrow-btn-icon {
+    display: none;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+header nav #user_area button .arrow-btn-icon:hover {
+  display: block;
+  font-size: var(--paragraph-size);
+  margin-left: .5rem;
+  color: #fff;
+  opacity: 1;
+}
+
+header nav #user_area button:hover {
+  background-color: #044875;
 }
 
 main .header-bottom {
@@ -154,6 +155,11 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
   border-radius: 0 5px 5px 0;
   width: 19%;
 }
+
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label button:hover {
+  background-color: #044875;
+}
+
 main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul {
   display: flex;
   gap: 1rem;
