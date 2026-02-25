@@ -84,7 +84,7 @@ header nav #user_area button {
 }
 
 header nav #user_area button .arrow-btn-icon {
-    display: none;
+    display: hidden;
   transition: all .3s ease-in;
   opacity: 0;
 }
