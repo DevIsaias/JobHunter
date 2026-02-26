@@ -56,6 +56,10 @@ header nav #navbar {
 header nav #navbar li a {
   color: #000;
   font-weight: 300;
+  opacity: 0.6;
+}
+header nav #navbar li a:hover {
+  opacity: 1;
 }
 header nav #navbar::after {
   content: "";
@@ -80,25 +84,9 @@ header nav #user_area button {
   border-radius: 5px;
   background-color: var(--main-color);
   color: #fff;
-  position: relative;
 }
-
-header nav #user_area button .arrow-btn-icon {
-    display: hidden;
-  transition: all .3s ease-in;
-  opacity: 0;
-}
-
-header nav #user_area button .arrow-btn-icon:hover {
-  display: block;
-  font-size: var(--paragraph-size);
-  margin-left: .5rem;
-  color: #fff;
-  opacity: 1;
-}
-
 header nav #user_area button:hover {
-  background-color: #044875;
+  background-color: #135bbe;
 }
 
 main .header-bottom {
@@ -135,7 +123,7 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
   transition: all 0.2s;
 }
 main .header-bottom .header-bottom-presentation .presentation-text .search-container label input {
-  width: 81%;
+  width: 73%;
   height: 30px;
   padding: 3px 7px;
   font-size: var(--paragraph-size);
@@ -149,17 +137,31 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
   height: 30px;
   cursor: pointer;
   padding-inline: 20px;
+  padding-left: 30px;
   border: none;
   background-color: var(--main-color);
   color: #fff;
   border-radius: 0 5px 5px 0;
-  width: 19%;
+  width: 26%;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: 0.2s;
+  position: relative;
 }
-
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label button .arrow-btn-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+main .header-bottom .header-bottom-presentation .presentation-text .search-container label button:hover .arrow-btn-icon {
+  display: block;
+  animation: arrowShowing 0.2s ease-in forwards;
+}
 main .header-bottom .header-bottom-presentation .presentation-text .search-container label button:hover {
-  background-color: #044875;
+  padding-inline: 20px;
+  background-color: #135bbe;
 }
-
 main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul {
   display: flex;
   gap: 1rem;
@@ -204,6 +206,7 @@ main .showing-jobs .showing-jobs-card h2 {
   font-size: 26px;
   text-align: center;
   margin-bottom: 15px;
+  cursor: default;
 }
 main .showing-jobs .showing-jobs-card p {
   font-size: var(--paragraph-size);
@@ -211,6 +214,7 @@ main .showing-jobs .showing-jobs-card p {
   color: #777777;
   margin-bottom: 10px;
   transition: all 0.8s;
+  cursor: default;
 }
 main .showing-jobs .showing-jobs-card button {
   padding: 4px 17px;
@@ -306,7 +310,7 @@ main .about-us-sec .about-us-sec-texts p {
   margin-bottom: 10px;
 }
 main .about-us-sec .about-us-sec-texts button {
-  padding: 4px 17px;
+  padding-block: 6px;
   font-size: var(--paragraph-size);
   background-color: var(--main-color);
   border: none;
@@ -314,6 +318,26 @@ main .about-us-sec .about-us-sec-texts button {
   color: #fff;
   border-radius: 5px;
   transition: all 0.4s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 165px;
+  padding-inline: 20px;
+  padding-left: 30px;
+}
+main .about-us-sec .about-us-sec-texts button .arrow-btn-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+main .about-us-sec .about-us-sec-texts button:hover .arrow-btn-icon {
+  display: block;
+  animation: arrowShowing 0.2s ease-in forwards;
+}
+main .about-us-sec .about-us-sec-texts button:hover {
+  padding-inline: 20px;
+  background-color: #135bbe;
 }
 main .about-us-sec .about-us-sec-texts::after {
   content: "";
@@ -378,5 +402,15 @@ main .about-us-sec::after {
 @keyframes rotate {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes arrowShowing {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
