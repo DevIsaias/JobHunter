@@ -123,7 +123,7 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
   transition: all 0.2s;
 }
 main .header-bottom .header-bottom-presentation .presentation-text .search-container label input {
-  width: 73%;
+  width: 77%;
   height: 30px;
   padding: 3px 7px;
   font-size: var(--paragraph-size);
@@ -142,7 +142,7 @@ main .header-bottom .header-bottom-presentation .presentation-text .search-conta
   background-color: var(--main-color);
   color: #fff;
   border-radius: 0 5px 5px 0;
-  width: 26%;
+  width: 22%;
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -197,6 +197,7 @@ main .showing-jobs .showing-jobs-card {
   justify-content: center;
   overflow: hidden;
   transition: all 0.3s;
+  border-bottom: 2px solid #d8d8d8;
 }
 main .showing-jobs .showing-jobs-card i {
   font-size: var(--heading-one-size);
@@ -270,22 +271,24 @@ main .showing-jobs::after {
   position: absolute;
   height: 1000px;
   width: 1000px;
-  background-color: #f7caca;
+  background-color: rgba(247, 202, 202, 0.4509803922);
   border-radius: 100%;
   z-index: -3;
-  top: 50%;
-  left: 60%;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 main .showing-jobs::before {
   content: "";
   position: absolute;
   height: 500px;
   width: 500px;
-  background-color: #f7caca;
+  background-color: rgb(247, 202, 202);
   border-radius: 100%;
   z-index: -3;
   top: 80%;
   left: 50%;
+  transform: translateX(-50%);
 }
 main .about-us-sec {
   display: grid;
@@ -299,19 +302,20 @@ main .about-us-sec {
   overflow: hidden;
 }
 main .about-us-sec .about-us-sec-texts {
-  color: #ffffff;
+  color: #455a64;
   position: relative;
 }
 main .about-us-sec .about-us-sec-texts h2 {
-  font-size: var(--heading-main-size);
+  font-size: 6rem;
 }
 main .about-us-sec .about-us-sec-texts p {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: rgba(86, 109, 119, 0.89);
 }
 main .about-us-sec .about-us-sec-texts button {
   padding-block: 6px;
-  font-size: var(--paragraph-size);
+  font-size: 20px;
   background-color: var(--main-color);
   border: none;
   cursor: pointer;
@@ -322,7 +326,7 @@ main .about-us-sec .about-us-sec-texts button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 165px;
+  width: 195px;
   padding-inline: 20px;
   padding-left: 30px;
 }
@@ -339,18 +343,6 @@ main .about-us-sec .about-us-sec-texts button:hover {
   padding-inline: 20px;
   background-color: #135bbe;
 }
-main .about-us-sec .about-us-sec-texts::after {
-  content: "";
-  position: absolute;
-  width: 1800px;
-  height: 1000px;
-  left: -190%;
-  top: -320%;
-  background-color: transparent;
-  border-radius: 100%;
-  border: 500px solid rgb(255, 180, 180);
-  z-index: -2;
-}
 main .about-us-sec::before {
   content: "";
   position: absolute;
@@ -364,17 +356,84 @@ main .about-us-sec::before {
   z-index: -1;
   animation: rotate 120s linear infinite;
 }
-main .about-us-sec::after {
-  content: "";
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  width: 140px;
-  height: 140px;
-  background-color: transparent;
-  border: 1px solid rgba(15, 137, 218, 0.4196078431);
-  z-index: -1;
-  animation: rotate 40s linear infinite reverse;
+main .testimonial-sec-intro h2 {
+  text-align: center;
+  color: #313131;
+  font-size: 6rem;
+  margin-top: 30px;
+}
+main .testimonial-sec {
+  display: flex;
+  justify-content: center;
+  padding: 60px 5%;
+  position: relative;
+  gap: 2rem;
+}
+main .testimonial-sec .testimonial-img {
+  position: relative;
+}
+main .testimonial-sec .testimonial-img .testimonial-img-sticky {
+  position: sticky;
+  display: inline-block;
+  left: 100%;
+  top: 10%;
+}
+main .testimonial-sec .testimonial-img .testimonial-img-sticky img {
+  width: 500px;
+}
+main .testimonial-sec .testimonials-cards-container {
+  position: relative;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card {
+  margin-bottom: 50px;
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+  border: 3px dashed transparent;
+  border-right: 5px solid #777777;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card div h3 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  font-weight: 800;
+  cursor: default;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card div h3 span {
+  color: var(--main-color);
+  font-weight: 400;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card div p {
+  font-size: var(--paragraph-size);
+  color: #414141;
+  cursor: default;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card div .testimonial-star {
+  color: #f7ba60;
+  cursor: default;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card img {
+  min-width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px dashed rgba(15, 137, 218, 0.4784313725);
+  padding: 3px;
+  transition: all 0.3s;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card img:hover {
+  min-width: 110px;
+  height: 110px;
+}
+main .testimonial-sec .testimonials-cards-container .testimonials-card:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  scale: 1.05;
+  border: 3px dashed rgba(15, 137, 218, 0.4784313725);
+  border-right: 3px dashed #777777;
 }
 
 @media (min-width: 1401px) {
@@ -391,12 +450,95 @@ main .about-us-sec::after {
   main .header-bottom .header-bottom-presentation .presentation-text .search-container label input {
     height: 40px;
     font-size: 24px;
-    width: 78%;
+    width: 74%;
   }
   main .header-bottom .header-bottom-presentation .presentation-text .search-container label button {
     height: 40px;
-    width: 22%;
+    width: 28%;
     font-size: 24px;
+  }
+  main .showing-jobs {
+    padding: 60px 15%;
+  }
+  main .showing-jobs .showing-jobs-card {
+    height: 330px;
+    width: 220px;
+  }
+  main .showing-jobs .showing-jobs-card::before {
+    height: 330px;
+    width: 220px;
+  }
+  main .showing-jobs .showing-jobs-card::after {
+    width: 330px;
+  }
+  main .about-us-sec {
+    padding: 60px 15%;
+  }
+  main .about-us-sec::before {
+    left: 16%;
+  }
+  main .testimonial-sec {
+    padding: 60px 15%;
+  }
+  main .testimonial-sec .testimonials-cards-container .testimonials-card {
+    margin-bottom: 80px;
+  }
+  main .testimonial-sec .testimonials-cards-container .testimonials-card div h3 {
+    margin-bottom: 10px;
+  }
+  main .testimonial-sec .testimonials-cards-container .testimonials-card img {
+    min-width: 110px;
+    height: 110px;
+  }
+  main .testimonial-sec .testimonials-cards-container .testimonials-card img:hover {
+    min-width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 992px) {
+  main .header-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 60px 5%;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text .search-container label {
+    width: 100%;
+    justify-content: center;
+  }
+  main .header-bottom .header-bottom-presentation .presentation-text .search-container .tags-links ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .header-bottom img {
+    display: none;
+  }
+  main .showing-jobs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  main .about-us-sec {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  main .about-us-sec img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  main .about-us-sec .about-us-sec-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .about-us-sec .about-us-sec-texts h2 {
+    font-size: 3rem;
+  }
+  main .testimonial-sec {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .testimonial-sec .testimonial-img {
+    display: none;
   }
 }
 @keyframes rotate {

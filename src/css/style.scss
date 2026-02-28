@@ -145,7 +145,7 @@ main {
             transition: all 0.2s;
 
             & input {
-              width: 73%;
+              width: 77%;
               height: 30px;
               padding: 3px 7px;
               font-size: var(--paragraph-size);
@@ -165,7 +165,7 @@ main {
               background-color: var(--main-color);
               color: #fff;
               border-radius: 0 5px 5px 0;
-              width: 26%;
+              width: 22%;
               display: flex;
               align-items: center;
               gap: 0.7rem;
@@ -240,6 +240,7 @@ main {
       justify-content: center;
       overflow: hidden;
       transition: all 0.3s;
+      border-bottom: 2px solid #d8d8d8;
 
       & i {
         font-size: var(--heading-one-size);
@@ -321,22 +322,24 @@ main {
       position: absolute;
       height: 1000px;
       width: 1000px;
-      background-color: #f7caca;
+      background-color: #f7caca73;
       border-radius: 100%;
       z-index: -3;
-      top: 50%;
-      left: 60%;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
     }
     &::before {
       content: "";
       position: absolute;
       height: 500px;
       width: 500px;
-      background-color: #f7caca;
+      background-color: rgb(247, 202, 202);
       border-radius: 100%;
       z-index: -3;
       top: 80%;
       left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -352,20 +355,21 @@ main {
     overflow: hidden;
 
     & .about-us-sec-texts {
-      color: #ffffff;
+      color: #455a64;
       position: relative;
       & h2 {
-        font-size: var(--heading-main-size);
+        font-size: 6rem;
       }
 
       & p {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: rgba(86, 109, 119, 0.89);
       }
 
       & button {
         padding-block: 6px;
-        font-size: var(--paragraph-size);
+        font-size: 20px;
         background-color: var(--main-color);
         border: none;
         cursor: pointer;
@@ -376,7 +380,7 @@ main {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        width: 165px;
+        width: 195px;
         padding-inline: 20px;
         padding-left: 30px;
 
@@ -397,18 +401,18 @@ main {
         }
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        width: 1800px;
-        height: 1000px;
-        left: -190%;
-        top: -320%;
-        background-color: transparent;
-        border-radius: 100%;
-        border: 500px solid rgb(255, 180, 180);
-        z-index: -2;
-      }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 1800px;
+      //   height: 1000px;
+      //   left: -190%;
+      //   top: -320%;
+      //   background-color: transparent;
+      //   border-radius: 100%;
+      //   border: 500px solid rgb(255, 180, 180);
+      //   z-index: -2;
+      // }
     }
 
     &::before {
@@ -424,50 +428,244 @@ main {
       z-index: -1;
       animation: rotate 120s linear infinite;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 10%;
-      right: 5%;
-      width: 140px;
-      height: 140px;
-      background-color: transparent;
-      border: 1px solid #0f89da6b;
-      z-index: -1;
-      animation: rotate 40s linear infinite reverse;
+  & .testimonial-sec-intro {
+    & h2 {
+      text-align: center;
+      color: #313131;
+      font-size: 6rem;
+      margin-top: 30px;
+    }
+  }
+
+  & .testimonial-sec {
+    display: flex;
+    justify-content: center;
+    padding: 60px 5%;
+    position: relative;
+    gap: 2rem;
+
+    & .testimonial-img {
+      position: relative;
+      & .testimonial-img-sticky {
+        position: sticky;
+        display: inline-block;
+        left: 100%;
+        top: 10%;
+        & img {
+          width: 500px;
+        }
+      }
+    }
+
+    & .testimonials-cards-container {
+      position: relative;
+      & .testimonials-card {
+        margin-bottom: 50px;
+        background-color: #eeeeee;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #e7e7e7;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s;
+        border: 3px dashed transparent;
+        border-right: 5px solid #777777;
+
+        & div {
+          & h3 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            font-weight: 800;
+            cursor: default;
+
+            & span {
+              color: var(--main-color);
+              font-weight: 400;
+            }
+          }
+          & p {
+            font-size: var(--paragraph-size);
+            color: #414141;
+            cursor: default;
+          }
+
+          & .testimonial-star {
+            color: #f7ba60;
+            cursor: default;
+          }
+        }
+
+        & img {
+          min-width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px dashed #0f89da7a;
+          padding: 3px;
+          transition: all 0.3s;
+
+          &:hover {
+            min-width: 110px;
+            height: 110px;
+          }
+        }
+
+        &:hover {
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          scale: 1.05;
+          border: 3px dashed #0f89da7a;
+          border-right: 3px dashed #777777;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 1401px) {
-  main .header-bottom {
-    padding: 60px 15%;
+  main {
+    & .header-bottom {
+      padding: 60px 15%;
 
-    & .header-bottom-presentation {
-      & .presentation-text {
-        h2 {
-          font-size: 76px;
-        }
-
-        p {
-          font-size: 24px;
-          line-height: 36px;
-        }
-
-        & .search-container label {
-          input {
-            height: 40px;
-            font-size: 24px;
-            width: 78%;
+      & .header-bottom-presentation {
+        & .presentation-text {
+          h2 {
+            font-size: 76px;
           }
 
-          button {
-            height: 40px;
-            width: 22%;
+          p {
             font-size: 24px;
+            line-height: 36px;
+          }
+
+          & .search-container label {
+            input {
+              height: 40px;
+              font-size: 24px;
+              width: 74%;
+            }
+
+            button {
+              height: 40px;
+              width: 28%;
+              font-size: 24px;
+            }
           }
         }
+      }
+    }
+
+    & .showing-jobs {
+      padding: 60px 15%;
+
+      & .showing-jobs-card {
+        height: 330px;
+        width: 220px;
+
+        &::before {
+          height: 330px;
+          width: 220px;
+        }
+
+        &::after {
+          width: 330px;
+        }
+      }
+    }
+
+    & .about-us-sec {
+      padding: 60px 15%;
+      &::before {
+        left: 16%;
+      }
+    }
+
+    & .testimonial-sec {
+      padding: 60px 15%;
+
+      & .testimonials-cards-container {
+        & .testimonials-card {
+          margin-bottom: 80px;
+          div {
+            h3 {
+              margin-bottom: 10px;
+            }
+          }
+          img {
+            min-width: 110px;
+            height: 110px;
+
+            &:hover {
+              min-width: 130px;
+              height: 130px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    .header-bottom {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 60px 5%;
+
+      & .header-bottom-presentation .presentation-text {
+        & .search-container {
+          & label {
+            width: 100%;
+            justify-content: center;
+          }
+          & .tags-links ul {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      & img {
+        display: none;
+      }
+    }
+
+    .showing-jobs {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .about-us-sec {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+
+      & img {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      & .about-us-sec-texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .testimonial-sec {
+      flex-direction: column;
+      align-items: center;
+
+      & .testimonial-img {
+        display: none;
       }
     }
   }
